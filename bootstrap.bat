@@ -1,3 +1,3 @@
 @SETLOCAL
 @CALL yarn run build
-@CALL yarn run serve
+@CALL yarn run start
