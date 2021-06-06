@@ -10,15 +10,14 @@ function App() {
 				<p>
 					Edit <code>src/App.tsx</code> and save to reload.
 				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
+				abcdef
+				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
 			</header>
+			<footer>
+				<div style={{backgroundColor: "#202020", color: "#e0e0e0", padding: "20px"}}>
+					2021 fotter inc
+				</div>
+			</footer>
 		</div>
 	);
 }
