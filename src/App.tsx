@@ -23,7 +23,7 @@ function App() {
 				<NameInputBox />
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
-				<NameInputBoxC/>
+				<NameInputBoxC />
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
