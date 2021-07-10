@@ -4,6 +4,9 @@ import './App.css';
 import { CounterComponent } from './ui-components/Couter';
 import { NameInputBox } from './ui-components/NameInputBox';
 import { NameInputBoxC } from './ui-components/NameInputBoxC';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -25,6 +28,20 @@ function App() {
 				<div className="empty-line"></div>
 				<NameInputBoxC />
 				<div className="empty-line"></div>
+				<div className="empty-line"></div>
+				<div className="empty-line"></div>
+				<div style={{ textAlign: "center" }}>
+					<FormGroup style={{ textAlign: "center" }}>
+						<FormControlLabel
+							control={<Switch size="small" checked={true} onChange={() => null} />}
+							label="Small"
+						/>
+						<FormControlLabel
+							control={<Switch checked={false} onChange={() => null} />}
+							label="Normal"
+						/>
+					</FormGroup>
+				</div>
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
 			</main>
