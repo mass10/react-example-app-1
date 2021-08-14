@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import logo from './logo.svg';
 import './App.css';
 import { CounterComponent } from './ui-components/Couter';
@@ -11,7 +11,7 @@ import Switch from '@material-ui/core/Switch';
 
 function App() {
 	// カウント、およびその setter
-	// @typescript-eslint/no-unused-vars
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [count, setCount] = useState(0);
 
 	return (
