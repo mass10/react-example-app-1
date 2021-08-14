@@ -1,0 +1,7 @@
+{
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4,
+    }
+}
