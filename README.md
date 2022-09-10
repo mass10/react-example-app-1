@@ -6,6 +6,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+# はじめに
+
+```bash
+npm install --global create-react-app
+npm install --global react-scripts
+#yarn add --dev @types/react/jsx-runtime
+```
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
