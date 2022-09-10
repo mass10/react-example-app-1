@@ -2,14 +2,15 @@
 //! ビルドユーティリティ
 //!
 
-/// Yarn を実行します。
+/// コマンドを実行します。
 ///
 /// ### Arguments
-/// `args` - Yarn のコマンドライン引数
-fn yarn(args: &[&str]) -> std::result::Result<(), Box<dyn std::error::Error>> {
+/// `args` - コマンドライン引数
+fn execute_command_sh(args: &[&str]) -> std::result::Result<(), Box<dyn std::error::Error>> {
 	// yarn プロセスを実行します。
 	let mut command = std::process::Command::new("cmd.exe");
-	command.args(&["/c", "yarn.cmd"]);
+	command.args(&["/C"]);
+	command.args(args);
 	let mut command = command.args(args).spawn()?;
 	let status = command.wait()?;
 
@@ -23,6 +24,16 @@ fn yarn(args: &[&str]) -> std::result::Result<(), Box<dyn std::error::Error>> {
 	}
 
 	return Ok(());
+}
+
+/// Yarn を実行します。
+///
+/// ### Arguments
+/// `args` - Yarn のコマンドライン引数
+fn yarn(args: &[&str]) -> std::result::Result<(), Box<dyn std::error::Error>> {
+	// yarn プロセスを実行します。
+	let command = &[&["yarn.cmd"], args].concat();
+	return execute_command_sh(command);
 }
 
 /// エントリーポイント
