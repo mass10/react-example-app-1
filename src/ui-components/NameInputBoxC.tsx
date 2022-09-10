@@ -10,6 +10,7 @@ export class NameInputBoxC extends React.Component {
 
 	/**
 	 * コンストラクター
+	 *
 	 * @param props 既定の状態管理プロパティーです。
 	 */
 	public constructor(props: any) {
@@ -35,16 +36,18 @@ export class NameInputBoxC extends React.Component {
 
 	/**
 	 * レンダリングが必要な瞬間に毎回呼び出されます。
-	 * @returns 
+	 *
+	 * @returns `JSX.Element`
 	 */
-	render(): React.ReactElement {
+	render(): /*React.ReactElement*/ JSX.Element {
 		// @ts-ignore
 		const name = this.state.name
 
 		// コンポーネントを返します。
+		const styles = { fontSize: "20px", padding: "8px" };
 		return (
 			<section>
-				<input name="name1" style={{ fontSize: "20px", padding: "8px" }} value={name} onChange={this.handleNameChange} />
+				<input name="name1" style={styles} value={name} onChange={this.handleNameChange} />
 			</section>
 		)
 	}
