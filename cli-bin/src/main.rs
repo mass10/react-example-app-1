@@ -33,7 +33,7 @@ fn execute_command_sh(args: &[&str]) -> std::result::Result<(), Box<dyn std::err
 fn yarn(args: &[&str]) -> std::result::Result<(), Box<dyn std::error::Error>> {
 	// yarn プロセスを実行します。
 	let command = &[&["yarn.cmd"], args].concat();
-	return execute_command_sh(command);
+	return execute_command_sh(&command);
 }
 
 /// エントリーポイント
