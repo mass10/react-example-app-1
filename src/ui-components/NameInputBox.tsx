@@ -21,9 +21,9 @@ export const NameInputBox = (): JSX.Element => {
 	)
 }
 
-export const NameInputBox2: React.FC<{ args: string }> = ({ args: string }) => {
+export const NameInputBox2: React.FC<{ name: string }> = (args: { name: string }) => {
 
-	const [name, setName] = useState("Jimi");
+	const [name, setName] = useState(args.name);
 
 	const handleNameChange = (e: any) => {
 		console.log(`${new Date()} [TRACE] new value is [${e.target.value}]`);
