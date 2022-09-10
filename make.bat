@@ -6,4 +6,3 @@ REM CALL yarn run build
 
 CALL cargo fmt
 CALL cargo run
-
