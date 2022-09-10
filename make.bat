@@ -1,3 +1,9 @@
 @SETLOCAL
-@CALL yarn install
-@CALL yarn run build
+@ECHO OFF
+
+REM CALL yarn install
+REM CALL yarn run build
+
+CALL cargo fmt
+CALL cargo run
+
