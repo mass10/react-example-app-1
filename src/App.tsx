@@ -1,20 +1,26 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import logo from './logo.svg';
 import './App.css';
 import { CounterComponent } from './ui-components/Couter';
-import { NameInputBox } from './ui-components/NameInputBox';
+import { NameInputBox, NameInputBox2 } from './ui-components/NameInputBox';
 import { NameInputBoxC } from './ui-components/NameInputBoxC';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
+import React from 'react';
 
-function App() {
+/**
+ * アプリケーション本体
+ *
+ * @returns 
+ */
+function App(): JSX.Element {
 	// カウント、およびその setter
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [count, setCount] = useState(0);
+	const [count, setCount] = React.useState(0);
 
-	return (
+	const app: JSX.Element = (
 		<div className="App">
 			<header className="App-header">
 				<p>
@@ -28,6 +34,8 @@ function App() {
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
 				<NameInputBox />
+				<div className="empty-line"></div>
+				<NameInputBox2 name='初期値' />
 				<div className="empty-line"></div>
 				<div className="empty-line"></div>
 				<NameInputBoxC />
@@ -51,11 +59,12 @@ function App() {
 			</main>
 			<footer>
 				<div className="App-footer">
-					2021 fotter inc
+					2021 null inc
 				</div>
 			</footer>
 		</div>
 	);
+	return app;
 }
 
 export default App;
